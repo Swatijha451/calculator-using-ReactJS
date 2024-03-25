@@ -2,11 +2,11 @@ import styles from "./ButtonsContainer.module.css";
 
 const buttonVAlues=['C','1','2','+','3','4','-','5','6','*','7','8','/','=','9','0','.'];
 
- const ButtonsContainer=()=>{
+ const ButtonsContainer=({onButtonClick})=>{
     return(
     <div className={styles.buttonContainer}>
         {buttonVAlues.map((buttonName)=>(
-        <button className={styles.button}>{buttonName}</button>
+        <button className={styles.button} onClick={()=>onButtonClick(buttonName)}>{buttonName}</button>
         ))}
       </div>
     );

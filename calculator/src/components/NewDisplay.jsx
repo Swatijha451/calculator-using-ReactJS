@@ -1,7 +1,7 @@
 import styles from "./NewDisplay.module.css";
 
-const NewDisplay=()=>{
-    return <input className={styles.display} type="text" />;
+const NewDisplay=({displayValue})=>{
+    return <input className={styles.display} type="text" value={displayValue} readOnly />;
 };
 
 export default NewDisplay;
